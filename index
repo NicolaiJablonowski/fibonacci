@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Kontrollstrukturen</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script>
+			"use strict";
+
+			// Programmiere hier calc
+function clicked() {			
+var i=1
+var vAnzahl= document.getElementById("idZahl").value;
+var vAusgabe = "";
+var i2=0	
+var i3=1	
+var vGesammt
+
+vAusgabe = vAusgabe + "<table border=1>";
+vAusgabe = vAusgabe + "<tr><th>" + "x" + "</th><th>" + "Fib(n)" +"</th></tr>";
+while (i<=vAnzahl) {
+
+vAusgabe= vAusgabe + "<tr><td>" +  i + "</td><td>" + i3 + "</td></tr>";
+// vGesammt=1 = i2=0 + i3=1
+vGesammt=i2+i3
+
+// i2=1 = i3=1
+i2=i3
+
+// i3=1 = vGesammt=1
+i3=vGesammt
+
+i= i+1;
+}
+document.getElementById("idOutput").innerHTML = vAusgabe;
+}
+</script>
+	</head>
+	<body>
+		<h1>Kontrollstrukturen</h1>
+		Eingabe: <input id="idZahl" type="text" value="10">
+	<button onClick="clicked();">Berechne!</button>
+		<div id="idOutput">Hier kommen die Zahlen</div>
+	</body>
+</html>
